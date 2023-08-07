@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="logo" src="immages/logo/logo.png" alt="" />
+      </div>
+      <nav class="productNav">
+        <button class="productType" id="bags">Bags</button>
+        <button class="productType" id="shoes">Shues</button>
+        <button class="productType" id="hats">Hats</button>
+      </nav>
+    </header>
+    <main>
+      <div class="information">
+        <div class="products-count">
+          <p class="txt">Number of products:</p>
+          <p class="number-of-products" id="numProducts">0</p>
+        </div>
+        <div class="sort">
+          <p class="section-name">Sort by:</p>
+          <button class="sort-button" id="sortA-Z">"A" to "Z"</button>
+          <button class="sort-button" id="sortZ-A">"Z" to "A"</button>
+          <button class="sort-button" id="sorLowPrice">By lowers price</button>
+          <button class="sort-button" id="sortHighPrice">
+            By highest price
+          </button>
+        </div>
+        <div class="filter">
+          <p class="section-name">Filter by:</p>
+          <div class="products-count">
+            <p class="txt">Price:</p>
+            <div class="filter-byprice">
+              <p class="txt">from</p>
+              <input type="text" class="range" id="min" />
+              <p class="txt">to</p>
+              <input type="text" class="range" id="max" />
+              <div class="clear-apply">
+                <button class="sort-button" id="applyPrice">Apply</button>
+              </div>
+            </div>
+          </div>
+          <div class="products-count">
+            <p class="txt">Colour:</p>
+            <div class="colour">
+              <button class="sort-button">black</button>
+              <button class="sort-button">blue</button>
+              <button class="sort-button">white</button>
+              <button class="sort-button">gray</button>
+              <button class="sort-button">green</button>
+              <button class="sort-button">brown</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="grid" id="grid">
+          <script type="module">
+            import displayArray from "./js/displayArray.js";
+
+            document.addEventListener("DOMContentLoaded", function () {
+              displayArray();
+            });
+          </script>
+        </div>
+
+        <div class="more">
+          <button class="more-button">Load more</button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
